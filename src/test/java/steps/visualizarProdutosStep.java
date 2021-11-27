@@ -24,8 +24,8 @@ public class visualizarProdutosStep {
     }
     @Quando("não estou logado")
     public void não_estou_logado() {
-       //String elementoSignin = driver.findElement(By.cssSelector("#_desktop_user_info > div > a")).getText();
-        //assertThat(driver.getTitle()).isEqualTo("Sign in");
+        String elementoSignin = driver.findElement(By.cssSelector("#_desktop_user_info > div > a > span")).getText();
+        assertThat(elementoSignin).isEqualTo("Sign in");
 
     }
     @Então("visualizo o produto {string} na posicao {string}")
